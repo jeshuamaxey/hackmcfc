@@ -1,0 +1,27 @@
+.ball-speed-vis {
+  .half {
+    width: 640px;
+    height: 760px;
+
+    background: green;
+
+    .eighteen-yard-box {
+      position: relative;
+      top: 220px;
+      left: 440px;
+      width: 200px;
+      height: 360px;
+      background: red;
+      border: solid white 1px;
+      .six-yard-box {
+        position: relative;
+        top: 25%;
+        right: -119px;
+        width: 80px;
+        height: 170px;
+        background: pink;
+        border: solid white 1px;
+      }
+    }
+  }
+}

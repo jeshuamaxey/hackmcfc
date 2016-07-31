@@ -1,0 +1,44 @@
+$light-grey: #eee;
+$dark-grey: #ddd;
+
+.pitch-map {
+  .player-image {
+    max-width: 100px;
+    visibility: hidden;
+  }
+
+  canvas {
+    display: block;
+    margin: 0 auto;
+    background: rgb(80,185,90);
+  }
+
+  .paths {
+    padding: 0;
+    border: solid $light-grey 1px;
+    header {
+      padding: 1px 5px;
+      background: $light-grey;
+      border-bottom: solid $dark-grey 1px;
+    }
+  }
+
+  .paths-list {
+    max-height: 608px;
+    padding-top: 10px;
+    overflow: scroll;
+
+    li.path {
+      padding: 10px;
+      margin-bottom: 10px;
+      &:hover {
+        background: $light-grey;
+        cursor: pointer;
+      }
+
+      &.current-path {
+        background: $dark-grey;
+      }
+    }
+  }
+}

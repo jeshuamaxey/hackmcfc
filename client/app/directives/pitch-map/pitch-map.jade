@@ -1,0 +1,23 @@
+div.pitch-map
+  .col-sm-8
+    canvas#pitch(width=936, height=608)
+
+  .col-sm-4.paths
+    header
+      h2 Paths
+    ul.list-unstyled.paths-list
+      li.path(ng-repeat="path in paths track by path._id"
+        ng-class="{'current-path': path._id === currentPathId}")
+        b # {{$index}} | {{path.filename}}
+        br
+        b {{ path.playerList.length }}&nbsp;
+        span players involved
+        br
+        b {{ path.totalYardage | number : 0}}&nbsp;
+        span yards to shooting chance
+        ol(ng-click="reload($index)")
+          li(ng-repeat="player in path.playerList track by $index")
+            | {{ player.name | playerName }}
+
+  img#passerImg.player-image
+  img#receiverImg.player-image
